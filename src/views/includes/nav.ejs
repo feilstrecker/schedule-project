@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="nav-container">
+    <form class="nav-form" action="/" method="get">
+      <button type="submit">AGENDA</button>
+    </form>
+    <% if(!user) { %>
+    <form class="nav-form" action="/login/index" method="get">
+      <button type="submit">LOGIN</button>
+    </form>
+    <% } else { %>
+    <form class="nav-form" action="/contato/index" method="get">
+      <button type="submit">CADASTRAR CONTATOS</button>
+    </form>
+    <form class="nav-form" action="/login/logout" method="get">
+      <button type="submit">SAIR</button>
+    </form>
+    <% }; %>
+  </div>
+</body>
+</html>

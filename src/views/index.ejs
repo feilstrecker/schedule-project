@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/public/assets/css/style.css">
+  <title>Home</title>
+</head>
+<body>
+  <%- include('includes/nav.ejs'); %>
+  <div class="table-container">
+    <table class="table">
+      <% for(let contato of contatos) { %>
+      <tr class="tr-info">
+        <td>Nome: <b><%= contato.nome %></b></td>
+        <td>E-mail: <b><%= contato.email %></b></td>
+        <td>Contato: <b><%= contato.telefone %></b></td>
+        <td><a href="/contato/index/<%= contato._id %>">Editar</a></td>
+        <td><a href="/contato/delete/<%= contato._id %>">Deletar</a></td>
+      <% } %>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
