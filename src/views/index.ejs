@@ -9,18 +9,25 @@
 </head>
 <body>
   <%- include('includes/nav.ejs'); %>
-  <div class="table-container">
-    <table class="table">
-      <% for(let contato of contatos) { %>
-      <tr class="tr-info">
-        <td>Nome: <b><%= contato.nome %></b></td>
-        <td>E-mail: <b><%= contato.email %></b></td>
-        <td>Contato: <b><%= contato.telefone %></b></td>
-        <td><a href="/contato/index/<%= contato._id %>">Editar</a></td>
-        <td><a href="/contato/delete/<%= contato._id %>">Deletar</a></td>
-      <% } %>
-      </tr>
-    </table>
-  </div>
+  <main class="main-index">
+    <div class="nav-spacing"></div>
+    <div class="table-container">
+      <table class="table">
+        <% for(let contato of contatos) { %>
+        <tr class="tr-info">
+          <td>Nome: <b><%= contato.nome %></b></td>
+          <td>E-mail: <b><%= contato.email %></b></td>
+          <td>Contato: <b><%= contato.telefone %></b></td>
+          <td>
+            <div class="contact-buttons">
+              <a href="/contato/index/<%= contato._id %>">Editar</a>
+              <a href="/contato/delete/<%= contato._id %>">Deletar</a>
+            </div>
+          </td>
+        <% } %>
+        </tr>
+      </table>
+    </div>
+</main>
 </body>
 </html>

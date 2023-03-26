@@ -8,21 +8,26 @@
 </head>
 <body>
   <div class="nav-container">
-    <form class="nav-form" action="/" method="get">
-      <button type="submit">AGENDA</button>
-    </form>
-    <% if(!user) { %>
-    <form class="nav-form" action="/login/index" method="get">
-      <button type="submit">LOGIN</button>
-    </form>
-    <% } else { %>
-    <form class="nav-form" action="/contato/index" method="get">
-      <button type="submit">CADASTRAR CONTATOS</button>
-    </form>
-    <form class="nav-form" action="/login/logout" method="get">
-      <button type="submit">SAIR</button>
-    </form>
-    <% }; %>
+    <div class="nav-title-container">
+      <p>Project Schedule</p>
+    </div>
+    <div class="nav-form-container">
+      <form class="nav-form" action="/" method="get">
+        <button type="submit">Home</button>
+      </form>
+      <% if(!user) { %>
+      <form class="nav-form" action="/login/index" method="get">
+        <button type="submit">Login</button>
+      </form>
+      <% } else { %>
+      <form class="nav-form" action="/contato/index" method="get">
+        <button type="submit">Add contact</button>
+      </form>
+      <form class="nav-form" action="/login/logout" method="get">
+        <button type="submit">Exit</button>
+      </form>
+      <% }; %>
+    </div>
   </div>
 </body>
 </html>

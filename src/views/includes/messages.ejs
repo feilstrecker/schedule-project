@@ -1,19 +1,15 @@
 <% if(errors[0]) { %>
-    <div class="container-error">
-        <div class="alert-error">
-            <% errors.forEach(erro => { %>
-                <%= erro %><br>
-            <% }); %>
-        </div>
+    <div class="alert-error">
+        <% errors.forEach(erro => { %>
+            <%= erro %><br>
+        <% }); %>
     </div>
 <% } %>
 
 <% if(success[0]) { %>
-    <div class="container-success">
-        <div class="alert-success">
-            <% success.forEach(scs => { %>
-                <%= success %><br>
-            <% }); %>
-        </div>
+    <div class="alert-success">
+        <% success.forEach(scs => { %>
+            <%= success %><br>
+        <% }); %>
     </div>
 <% } %>
